@@ -1,0 +1,49 @@
+#categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    direction: rtl;
+}
+
+#items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    direction: rtl;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: 1px solid #dc1616;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.2s ease; 
+}
+
+
+button:hover {
+    transform: translateY(-5px)
+}
+
+.selected {
+    background: orange;
+    color: white;
+    border-color: orange;
+}
+
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
