@@ -47,3 +47,40 @@ button:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
+
+#chat-input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#chat-send-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+#analysis-result {
+    padding-bottom: 90px;
+}

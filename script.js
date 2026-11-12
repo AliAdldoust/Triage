@@ -379,6 +379,7 @@ function displayFollowUp(result) {
 
 
         try {
+
           
           const result = await processItems(answer);
           displayFollowUp(result)
@@ -396,3 +397,55 @@ function displayFollowUp(result) {
 
 
 }  
+
+
+
+
+
+
+
+
+
+
+
+const chatInput = document.getElementById("chat-input")
+
+const chatSendButton = document.getElementById('chat-send-button');
+
+chatSendButton.addEventListener('click', sendCustomMessage); 
+
+chatInput.addEventListener('keydown', (event) => {
+
+  if (event.key === 'Enter'){
+
+    sendCustomMessage();
+
+  }
+})
+
+
+async function sendCustomMessage(){
+
+
+      const message = chatInput.value.trim();
+
+
+      if (!message){
+        return;
+      }
+
+
+
+      try {
+
+          const result = await processItems([message])
+          displayFollowUp(result);
+
+
+      }catch(error){
+        console.error('Error:', error);
+      }
+
+
+}
+
