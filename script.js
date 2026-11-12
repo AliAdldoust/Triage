@@ -133,6 +133,8 @@ let selectedItems = [];
 
 const submitButton = document.createElement('button');
 
+
+
 submitButton.textContent = 'Send';
 submitButton.classList.add('submit-button');
 
@@ -271,6 +273,8 @@ async function processItems(newItems){
 
     const result = await response.json();
 
+    result.analysis = JSON.parse(result.analysis);
+
     conversationHistory.push({
           role: 'assistant',
           content: JSON.stringify(result.analysis)
@@ -329,6 +333,7 @@ function displayFollowUp(result) {
         });
 
 
+
       }
 
       if (followUp.response){
@@ -374,10 +379,13 @@ function displayFollowUp(result) {
 
 
         try {
-
+          
           const result = await processItems(answer);
           displayFollowUp(result)
           console.log('conversation:', conversationHistory)
+          console.log("Question:", result.analysis.question);
+
+
 
         } catch (error) {
           console.error(error);

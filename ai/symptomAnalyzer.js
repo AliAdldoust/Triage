@@ -49,14 +49,14 @@ export async function analyzeSymptoms(conversation) {
                 8. Do not ask questions just to keep the conversation going.
 
 
-                If you send a response, return ONLY valid JSON in this exact format: 
+                If you send a response, return ONLY valid JSON in this exact format, nothing else: 
                 {
                     "response": "Your response"
                 }
 
 
 
-                If you ask a question, return ONLY valid JSON in this exact format:
+                If you ask a question, return ONLY valid JSON in this exact format, nothing else:
                 {
                     "question": "Your follow-up question",
                     "answers": [
@@ -69,9 +69,8 @@ export async function analyzeSymptoms(conversation) {
 
     },
 
-                {
-                        ...conversation
-                },
+
+             ...conversation
 
 
             ],
